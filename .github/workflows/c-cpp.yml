@@ -14,7 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: dependencies
-      run: sudo apt install gnuradio
+      run: |
+        sudo apt update
+        sudo apt install gnuradio
     - name: run-cmake
       uses: lukka/run-cmake@v2.5
     - name: make
